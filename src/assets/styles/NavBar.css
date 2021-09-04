@@ -1,0 +1,54 @@
+.titulo {
+  display: grid;
+  background-color: black;
+  grid-template-columns: repeat(auto-fill);
+  grid-auto-flow: dense;
+  grid-template-rows: 23px 33px 23px;
+  color: red;
+}
+
+.titulo h2 {
+  display: grid;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-auto-flow: row;
+}
+
+ideal {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: dense;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.titulo #button1 {
+  display: grid;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  justify-self: left;
+}
+
+.titulo #button2 {
+  display: grid;
+  grid-column-start: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  justify-self: left;
+}
+.titulo #button3 {
+  display: grid;
+  grid-column-start: 4;
+  justify-self: left;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.titulo #button4 {
+  display: grid;
+  grid-column-start: 5;
+  justify-self: left;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
