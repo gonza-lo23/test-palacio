@@ -5,6 +5,8 @@ import '../assets/styles/NavBar.css';
 const imprimir = () =>alert("1.000.023");
 const imprimir2 = () =>alert("$200.25");
 const imprimir3 = () =>alert("400 usd");
+const imprimir4 = () =>alert("registro no autorizado por el momento");
+
 
 const NavBar = () => {
     return (
@@ -15,7 +17,7 @@ const NavBar = () => {
 
       <button id="button2" className="btn btn-secondary btn-sm"onClick={imprimir2}>ver cotizacion peso/usd</button>
       <button id="button3"  className="btn btn-danger btn-sm"onClick={imprimir3}>ver cotizacion usd/oro</button>
-      <button id="button4"  className="btn btn-outline-light btn-sm"onClick={imprimir3}>Iniciar Sesion</button>
+      <button id="button4"  className="btn btn-outline-light btn-sm"onClick={imprimir4}>Iniciar Sesion</button>
 
       
         </div>
