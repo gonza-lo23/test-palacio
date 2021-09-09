@@ -1,10 +1,10 @@
 .titulo {
   display: grid;
-  background-color: black;
-  grid-template-columns: repeat(auto-fill);
+  background-color: rgb(19, 160, 148);
+  grid-template-columns: 25% 45% 10 10% 5% 5%;
   grid-auto-flow: dense;
   grid-template-rows: 23px 33px 23px;
-  color: red;
+  color: rgb(3, 15, 9);
 }
 
 .titulo h2 {
@@ -22,33 +22,49 @@ ideal {
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
 
-.titulo #button1 {
-  display: grid;
-  grid-column-start: 2;
-  grid-row-start: 2;
-  grid-row-end: 2;
-  justify-self: left;
-}
-
-.titulo #button2 {
-  display: grid;
-  grid-column-start: 3;
-  grid-row-start: 2;
-  grid-row-end: 2;
-  justify-self: left;
-}
-.titulo #button3 {
-  display: grid;
-  grid-column-start: 4;
-  justify-self: left;
-  grid-row-start: 2;
-  grid-row-end: 2;
-}
-
 .titulo #button4 {
   display: grid;
   grid-column-start: 5;
+  justify-self: right;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+.titulo #button3 {
+  display: grid;
+  grid-column-start: 7;
   justify-self: left;
   grid-row-start: 2;
   grid-row-end: 2;
+}
+
+.input-group {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+}
+.input-group #lupita {
+  display: grid;
+  height: 39px;
+  width: 65px;
+  grid-column-start: 4;
+  grid-row-start: 2;
+  border-radius: 5px;
+}
+.form-outline #form1 {
+  display: grid;
+  height: 38px;
+  width: 500px;
+  align-self: right;
+  grid-row-start: 2;
+}
+
+.carrito {
+  display: grid;
+  height: 26px;
+  width: 26px;
+  justify-self: left;
+  grid-column-start: 6;
+  grid-row-start: 2;
+  column-gap: 5px;
 }

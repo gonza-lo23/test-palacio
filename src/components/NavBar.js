@@ -1,25 +1,33 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import Header from "./Header.js";
 import '../assets/styles/NavBar.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CartWidget from "../components/CartWidget.js";
 
-const imprimir = () =>alert("1.000.023");
-const imprimir2 = () =>alert("$200.25");
-const imprimir3 = () =>alert("400 usd");
+
+
 const imprimir4 = () =>alert("registro no autorizado por el momento");
+ 
 
-
-const NavBar = () => {
+const NavBar = (props) => {
+    
+    
     return (
+
         <div className="titulo">
-            <h2>Cotizacion bursatil</h2>
-            
-      <button id="button1" className="btn btn-primary btn-sm" onClick={imprimir}>ver cotizacion bitcoin/usd</button>
+            <h2>{props.title}</h2>
+            <div className="input-group">
+  <div className="form-outline">
+    <input type="search" id="form1" className="form-control" />
+  </div>
+  <button id="lupita" type="button" className="btn btn-primary">
+    <i className="fas fa-search">Search</i>
+  </button>
+</div>
+<button id="button4" type="button" className="btn btn-outline-light">Login</button>
 
-      <button id="button2" className="btn btn-secondary btn-sm"onClick={imprimir2}>ver cotizacion peso/usd</button>
-      <button id="button3"  className="btn btn-danger btn-sm"onClick={imprimir3}>ver cotizacion usd/oro</button>
-      <button id="button4"  className="btn btn-outline-light btn-sm"onClick={imprimir4}>Iniciar Sesion</button>
-
-      
+        <CartWidget className="carrito"/>
         </div>
     )
 };

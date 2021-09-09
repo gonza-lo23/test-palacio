@@ -1,0 +1,28 @@
+.main {
+  display: inline-grid;
+  background-color: rgb(211, 226, 222);
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 300px 500px 500px 500px;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.main #itemListContainer {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  align-self: center;
+}
+
+.main .segunda-fila {
+  display: inline-grid;
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.main .segunda-fila #carta6 {
+  display: grid;
+  grid-column-start: 5;
+  grid-row-start: 4;
+}

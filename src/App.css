@@ -1,0 +1,12 @@
+.Header {
+  grid-area: header;
+}
+.Main {
+  grid-area: main;
+}
+.SideBar {
+  grid-area: sidebar;
+}
+.Footer {
+  grid-area: footer;
+}

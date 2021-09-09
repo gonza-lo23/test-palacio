@@ -1,0 +1,34 @@
+.card {
+  display: grid;
+  grid-template-rows: 50px 200px auto auto 30px;
+}
+
+.card #imagen-principal {
+  display: grid;
+  width: 100%;
+  height: 40%;
+}
+
+.card #product-info {
+  display: grid;
+  grid-template-columns: 50px 200px;
+  grid-template-rows: 30px 30px;
+}
+
+.card #product-info #precio {
+  display: grid;
+  grid-row-start: 1;
+  align-self: center;
+}
+.card #imagen-carrito {
+  display: grid;
+  grid-row-start: 2;
+  width: 26px;
+  height: 26px;
+  align-self: center;
+}
+.card #carro-info {
+  display: grid;
+  grid-row-start: 2;
+  align-self: left;
+}
