@@ -10,6 +10,8 @@ import CartWidget from "../components/CartWidget.js";
 const imprimir4 = () =>alert("registro no autorizado por el momento");
  
 
+
+
 const NavBar = (props) => {
     
     
@@ -27,7 +29,7 @@ const NavBar = (props) => {
 </div>
 <button id="button4" type="button" className="btn btn-outline-light">Login</button>
 
-        <CartWidget className="carrito"/>
+        <CartWidget className="carrito" infos={props.infos}/>
         </div>
     )
 };

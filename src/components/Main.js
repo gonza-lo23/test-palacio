@@ -2,90 +2,34 @@ import React from 'react'
 import Card from "./Card.js";
 import ItemListContainer from './ItemListContainer.js';
 import "../assets/styles/Main.css";
+import GrupoCartas from './GrupoCartas.js';
 
 
 function Main(props) {
 
   
-
+   const [isLogged, setIsLogged] = React.useState(false);
+   
+  
+   const handleClick = () => {
+     if(isLogged === true){
+       setIsLogged(false);
+     }else{
+       setIsLogged(true);
+     }
+   };
+   
     return (
           <div className="main" >
-            <ItemListContainer id="itemListContainer" name="jorge"/>
+            <div className="main-text">
+            <ItemListContainer></ItemListContainer>
+            <h5>Donde los pequeños inversores logran la libertad financiera
             
-          <Card 
-           id="carta1"
-           title ="parte 1"
-           src="https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?w=800"
-           text="sdadasdasdsad
-           asdasdsadsad"
-         />
-         
-         <Card 
-          id="carta2"
-          title ="parte 2"
-          src="https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg"
-          description="asdasdasdadsdas
-          asdasdsadsad
-          adsadasd"
-         />
-         
-         <Card 
-         id="carta3"
-         title ="parte 3"
-         src= "https://agenciacomma.com/wp-content/uploads/2021/04/busqueda-inversa-imagenes.jpg"
-          description="asdasdasdadsdas
-          asdasdsadsad
-          adsadasd"
-         />
-         <Card 
-         id="carta4"
-         title ="parte 4"
-         src= "https://agenciacomma.com/wp-content/uploads/2021/04/busqueda-inversa-imagenes.jpg"
-          description="asdasdasdadsdas
-          asdasdsadsad
-          adsadasd"
-         />
-         
-        <div className="segunda-fila">
-            
-          <Card 
-           id="carta5"
-           title ="parte 1"
-           src="https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?w=800"
-           text="sdadasdasdsad
-           asdasdsadsad"
-         />
-         
-         <Card 
-          id="carta6"
-          title ="parte 2"
-          src="https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg"
-          description="asdasdasdadsdas
-          asdasdsadsad
-          adsadasd"
-         />
-         
-         <Card 
-         id="carta7"
-         title ="parte 3"
-         src= "https://agenciacomma.com/wp-content/uploads/2021/04/busqueda-inversa-imagenes.jpg"
-          description="asdasdasdadsdas
-          asdasdsadsad
-          adsadasd"
-         />
-         <Card 
-         id="carta4"
-         title ="parte 4"
-         src= "https://agenciacomma.com/wp-content/uploads/2021/04/busqueda-inversa-imagenes.jpg"
-          description="asdasdasdadsdas
-          asdasdsadsad
-          adsadasd"
-         />
-         
-        </div>
-        
-         
-            
+            </h5>
+            <h5>{isLogged.toString()}</h5>
+            <button onClick={handleClick}>logeate</button>
+            </div>
+            <GrupoCartas/>  
         </div>
     )
 }

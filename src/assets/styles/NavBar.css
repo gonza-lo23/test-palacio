@@ -1,6 +1,6 @@
 .titulo {
   display: grid;
-  background-color: rgb(19, 160, 148);
+  background-color: rgb(68, 163, 155);
   grid-template-columns: 25% 45% 10 10% 5% 5%;
   grid-auto-flow: dense;
   grid-template-rows: 23px 33px 23px;

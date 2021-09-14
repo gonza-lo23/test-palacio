@@ -1,19 +1,17 @@
-import React from 'react'
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {useState} from 'react';
 import "../assets/styles/CartWidget.css";
 import carrito from "../assets/photos/carrito.png";
 
-function CartWidget() {
-    const [count, setCount] = useState(0);
-
+function CartWidget(props) {
+    const valorCarritos= props.v
     return (
         
         <div className="carrito">
              <img src={carrito} alt="" />
-       
+            <h2>{props.infos}</h2>
         </div>
     )
 }
 
-export default CartWidget
+export default CartWidget;

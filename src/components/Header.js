@@ -6,6 +6,7 @@ function Header(props) {
         <div>
             <NavBar
              title="Cotizacion Bursatil"
+             infos={props.info}
             />
         </div>
     )
