@@ -1,7 +1,6 @@
 .main {
   display: grid;
   background-color: rgb(190, 219, 212);
-
   align-items: center;
   justify-content: center;
 }
@@ -16,7 +15,6 @@
 
 .main .main-text {
   display: grid;
-
   align-items: center;
   justify-content: center;
   height: 500px;

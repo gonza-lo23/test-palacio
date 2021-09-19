@@ -1,25 +1,22 @@
 import "../assets/styles/Card.css";
 import React from 'react';
-import App from "../App.js";
-import carrito from "../assets/photos/carrito.png";
-import Main from "./Main";
-import GrupoCartas from "./GrupoCartas";
-  
+import ItemList from "./ItemList";
+import carrito from '../assets/photos/carrito.png';
+import {Link} from 'react-router-dom';
 
 
-function Card(props) {
-
-
-  
+function Card({title, description, image, productId}) {
 
     return (
         < div className="card">
+            <Link to={`/product/${productId}`}>
             <div className="card-image">
             <img id="imagen-principal"
-            src={props.src}
+            src={props.image}
             alt="imagen"
             />
             </div>
+            </Link>
             <div className="card-text">
                 <span className="date">{props.date}</span>
              <h2>{props.postTitle}</h2>
@@ -41,7 +38,7 @@ function Card(props) {
                  </div>
                  
                  <div className="card-stat">
-                     <img src={props.imagen} alt="" />
+                     <img src={carrito} alt="" />
                      <button>añadir a carrito</button>
                  </div>
             </div> 

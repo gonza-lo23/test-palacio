@@ -68,3 +68,8 @@ ideal {
   grid-row-start: 2;
   column-gap: 5px;
 }
+
+.list a {
+  text-decoration: none;
+  color: white;
+}

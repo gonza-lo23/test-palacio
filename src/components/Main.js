@@ -1,8 +1,6 @@
-import React from 'react'
-import Card from "./Card.js";
+import React from 'react';
 import ItemListContainer from './ItemListContainer.js';
 import "../assets/styles/Main.css";
-import GrupoCartas from './GrupoCartas.js';
 
 
 function Main(props) {
@@ -22,14 +20,15 @@ function Main(props) {
     return (
           <div className="main" >
             <div className="main-text">
-            <ItemListContainer></ItemListContainer>
             <h5>Donde los pequeños inversores logran la libertad financiera
             
             </h5>
             <h5>{isLogged.toString()}</h5>
             <button onClick={handleClick}>logeate</button>
             </div>
-            <GrupoCartas/>  
+            <div className="cartas">
+            <ItemListContainer /> 
+            </div> 
         </div>
     )
 }

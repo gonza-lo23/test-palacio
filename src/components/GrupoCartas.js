@@ -1,55 +1,15 @@
-import React, {useEffect, useState} from 'react';
+  /*  import React, {useEffect, useState} from 'react';
 import Main from "./Main";
 import Card from './Card';
 import carrito from "../assets/photos/carrito.png";
 
 
-
+  
 
 function GrupoCartas() {
 
 
-    const [valorIni, setValorIni] = useState(1);
-    const [valorIni2, setValorIni2] = useState(1);
-    const [valorIni3, setValorIni3] = useState(1);
-
-    useEffect(() => {
-      
-    }, )
-
-    const sumarBoton = () => {
-      setValorIni((p)=>p +1)
-     
-     };
-   
-      .then()
-      const restarBoton = () => {
-       setValorIni((p)=>!p>1 -1)
-      
-      };
-      
-      const sumarBoton2 = () => {
-        setValorIni2((p) => p + 1);
-      };
-      
-      const restarBoton2 = () => {
-       setValorIni2((p)=>p -1)
-      
-      };
-      
-       
-      const sumarBoton3 = () => {
-        setValorIni3((p) => p + 1);
-      
-      };
-      
-      const restarBoton3 = () => {
-       setValorIni3((p)=>p -1)
-      
-      };
-      
-      
-    
+  
 
     return (
         <div>
@@ -198,3 +158,4 @@ function GrupoCartas() {
 }
 
 export default GrupoCartas
+*/
