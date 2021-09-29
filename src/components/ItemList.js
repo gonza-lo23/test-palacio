@@ -1,18 +1,16 @@
-import React, {useEffect, useState} from 'react';
-import Card from './Card.js';
-import Item from './Item.js';
+import React from 'react'
+import Item from './Item' 
+import  '../assets/styles/ItemList.css'
+export const ItemList = ({items=[]}) => {
 
 
-
-
-function ItemList() {
     return (
-        <div>
-            {product.map(()=>
-            )}
+        <div className='bb' >
+            {items.map(item =>
+
+             <Item item={item}
+             
+             /> )}
         </div>
-    );
-};
-
-export default ItemList;
-
+    )
+}

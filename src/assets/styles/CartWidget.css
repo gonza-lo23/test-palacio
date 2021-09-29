@@ -1,9 +1,7 @@
 .carrito img {
   display: grid;
-  height: 26px;
-  width: 26px;
-  justify-self: center;
-  grid-column-start: 6;
-  grid-row-start: 2;
-  column-gap: 5px;
+  height: 36px;
+  width: 36px;
+  background-color: aliceblue;
+  border-radius: 5px;
 }

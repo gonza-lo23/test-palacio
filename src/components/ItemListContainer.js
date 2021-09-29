@@ -1,36 +1,35 @@
-import React from 'react';
-import Main from './Main.js';
-import ItemCount from './ItemCount.js';
-import ItemList from './ItemList.js';
-import Item from './Item.js';
+import React, { useEffect, useState } from "react";
+import { ItemCount } from "./ItemCount";
+import {ItemList} from "./ItemList";
+import '../assets/styles/ItemListContainer.css';
+import { useParams } from "react-router-dom";
 
-function ItemListContainer(props) {
 
-    const [cargando, setCargando] = React.useState(false);
+function ItemListContainer () {
 
-    return (
-        <div>
-            <h1>el estado de nuestro servicio es {cargando ? "online" : "oflline"}</h1>
-           
-           {data?.map((producto)=> {
-               return (
-                   <Card 
-                     key={producto.id}
-                     productId={producto.id}
-                     title={producto.title}
-                     price={producto.price}
-               )
-           })}
-        </div>
+  const [data, setData] = React.useState([]);
+  const {categoryId} = useParams();
+
+  React.useEffect(()=> {
+const url = 'http://localhost:3001/products';
+
+fetch(url)
+.then(response => 
+  response.json()
+)
+.then((datas) => setData(datas))
+
+
+})
+
+    return(
+
+      <div className='gg' >
+           items categoria {categoryId}
+            <ItemList items={data}/>
+          
+      </div>
     )
-}
+};
 
 export default ItemListContainer;
-
-/*
-
-hacer una llamada con promise(set timeout) a una api falsa y
-hacer que esta cargando
-
-item es la cartita 
-itemList solo mapea*/

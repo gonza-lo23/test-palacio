@@ -1,33 +1,41 @@
 import React from 'react';
-import { useParams} from "react-router";
+import Main from '../components/Main';
+import Cardo from '../components/Cardo.js';
+import '../assets/styles/ProductDetail.css';
 
 function ProductDetail() {
 
-    const [product, setProduct] = React.useState({});
-    const {id}= useParams();
-    const [loading, setLoading] = React.useState(false);
+    const [data,setData] = React.useState([]);
 
     React.useEffect(() => {
-        setLoading(true);
-        fetch(`http://localhost:3001/products/${id}`)
-        .then((response) => response.json())
-        .then((data)=>setProduct(data))
-        .catch((error) => console.log("error", error))
-        .finally(()=> setLoading(false));
-    }, [id]);
+        fetch('http://localhost:3001/products')
+        .then((response)=>{
+            if(response.ok){
+                return response.json()
+            }else{
+                throw response
+            }
+        })
+        .then((data)=> setData(data))
+        .catch((error)=> console.log(error))
+    },[]);
 
-    if (loading) {
-        return <p>Cargando..</p>;
-    }else{
-        return( 
-        <div>
-            <h1>Product Detail</h1>
-            <p>{product?.title}</p>
-            <p>{product?.description}</p>
-            <img src={product?.image} alt="producto" />
-        </div>
-        );
-    }
+ return(
+     <div> <Main/>
+<div className="card" >
+    {data.map((producto)=>{
+      return ( 
+          <Cardo
+          img={producto.img}
+          description={producto.texto}
+      />
+      );
+
+
+    })}
+</div>
+</div>
+ )
 };
 
-export default ProductDetail
+export default ProductDetail;

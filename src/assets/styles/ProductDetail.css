@@ -1,0 +1,10 @@
+.body {
+  display: grid;
+  grid-template-columns: 5000px;
+  grid-template-rows: 5000px;
+}
+
+.card {
+  height: 500px;
+  width: 500px;
+}

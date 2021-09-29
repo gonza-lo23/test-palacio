@@ -1,33 +1,27 @@
-import * as React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import Home from './pages/Home.jsx';
-import Counter from './pages/Counter';
+import Home from './pages/Home';
+import { NavBar } from "./components/NavBar";
+import ItemListContainer from "./components/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 import NotFound from './pages/NotFound';
 
-import NavBar from './components/NavBar';
-import Footer from "./components/Footer.js";
-import SideBar from "./components/SideBar.js";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-
-
-
-function App() {
-
-
+export default function App() {
   return (
-    <BrowserRouter>
-    <NavBar/>
-    <Switch>
-      <Route exact path= "/" component={Home} />
-      <Route exact path= "/counter" component={Counter}/>
-      <Route  path= "*" component={NotFound}/>
-    </Switch>
-    <Footer>este es el footer</Footer>
+    
+    <BrowserRouter >
+      <div className="App">
+    <NavBar />
+        <Switch >
+          <Route exact path='/' component={Home}/>
+
+          <Route  path='/category/:categoryId' component={ItemListContainer}/>
+          <Route  path='/item/:id' component={ItemDetailContainer}/>
+          <Route  path='*' component={NotFound}/>
+
+        </Switch>
+        <footer >esto es un footer</footer>
+      </div>
     </BrowserRouter>
   );
-};
-
-export default App;
+}

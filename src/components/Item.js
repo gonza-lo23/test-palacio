@@ -1,52 +1,27 @@
-import React, {useEffect, useState} from 'react';
-import ItemList from './ItemList';
-import Card from './Card.js';
+import React from 'react';
 
-function Item(props) {
-    const [valorIni, setValorIni] = useState(1);
-    const [valorIni2, setValorIni2] = useState(1);
-    const [valorIni3, setValorIni3] = useState(1);
+import {Link} from 'react-router-dom';
+import {Card} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
+//la card
 
-    
+export default function Item({item}) {
 
-    const sumarBoton = () => {
-      setValorIni((p)=>p +1)
-     
-     };
-      const restarBoton = () => {
-       setValorIni((p)=>p -1)
-      
-      };
-      
-      const sumarBoton2 = () => {
-        setValorIni2((p) => p + 1);
-      };
-      
-      const restarBoton2 = () => {
-       setValorIni2((p)=>p -1)
-      
-      };
-      
-       
-      const sumarBoton3 = () => {
-        setValorIni3((p) => p + 1);
-      
-      };
-      
-      const restarBoton3 = () => {
-       setValorIni3((p)=>p -1)
-      
-      };
-      
-      const comprarProducto = ({product}) => {
-        console.log(`has comprado ${product}`)
-    }
 
     return (
         <div>
-            ~
+            <Card style={{display:'flex', justifyContent:'space-evenly', width: '18rem' }}>
+  <Card.Img variant="top" src={item.image} />
+  <Card.Body>
+    <Card.Title>{item.title}</Card.Title>
+    <Card.Text>{item.description}
+    {item.price}
+    </Card.Text>
+    <Button variant="primary">Go somewhere</Button>
+  </Card.Body>
+</Card>
+       
+        <Link to={`/item/${item.id}`}>Link al item</Link>
         </div>
     )
-}
-
-export default Item
+};
