@@ -17,11 +17,15 @@ export default function Item({item}) {
     <Card.Text>{item.description}
     {item.price}
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    <Link to={`/item/${item.id}`}>
+    <Button variant="primary">añadir al carrito
+   
+    </Button>
+    </Link>
   </Card.Body>
 </Card>
        
-        <Link to={`/item/${item.id}`}>Link al item</Link>
+       
         </div>
     )
 };

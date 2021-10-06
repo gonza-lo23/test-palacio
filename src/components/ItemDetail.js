@@ -20,9 +20,13 @@ export default function ItemDetail({ item }) {
             <div>${item?.price}</div>
             
             { count == 0 ?
-                    <ItemCount stock="6" initial="2" onAdd={addHandler} />
+                    <ItemCount 
+                    stock="6" 
+                    initial="2" 
+                    onAdd={addHandler} 
+                    />
                         :
-                        <Link to='/cart'>
+                        <Link to='/CartContext'>
                             <button>Terminar mi compra</button>
                         </Link> 
 

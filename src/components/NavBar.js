@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import CartWidget from "./CartWidget";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar} from 'react-bootstrap';
@@ -6,9 +6,10 @@ import {Link, NavLink} from 'react-router-dom';
 import '../assets/styles/NavBar.css';
 
 export const NavBar = () => {
-  return (
-    
 
+  
+
+  return (
     <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <Link to='/' className="navbar-brand">
@@ -27,11 +28,12 @@ export const NavBar = () => {
                 Ropa 
               </NavLink>
               
+              
             </div>
-            
+            <CartWidget activeClassName="active" className="nav-item mr-auto"/>
           </div>
+
           
-          <CartWidget className="carrito"/>
 
         </nav>
       </div>
